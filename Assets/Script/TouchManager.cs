@@ -25,7 +25,6 @@ public class TouchManager : MonoBehaviour
         //検出されている指の数だけ回す
         for (int i = 0; i < myTouches.Length; i++)
         {
-            Debug.Log("タッチされています");
 
             //左画面タッチ開始
             if (myTouches[i].phase == TouchPhase.Began && myTouches[i].position.x <= Screen.width / 2)

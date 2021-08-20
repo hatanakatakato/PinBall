@@ -25,30 +25,25 @@ public class FripperController : MonoBehaviour
     void Update()
     {
 
-        Debug.Log("update");
         //左矢印キーを押した時このGameObjectが左フリッパーなら動かす
         //このスクリプトが張り付いている左右のフリッパーを区別するのにtagを使っている
         if (Input.GetKeyDown(KeyCode.LeftArrow) && tag == "LeftFripperTag")
         {
-            Debug.Log("左キー押しました");
             SetAngleFlick();
         }
         //右矢印キーを押した時このGameObjectが右フリッパーなら動かす
         if (Input.GetKeyDown(KeyCode.RightArrow) && tag == "RightFripperTag")
         {
-            Debug.Log("右キー押しました");
             SetAngleFlick();
         }
 
         //矢印キー離された時フリッパーを元に戻す
         if (Input.GetKeyUp(KeyCode.LeftArrow) && tag == "LeftFripperTag")
         {
-            Debug.Log("左キー離しました");
             SetAngleDefault();
         }
         if (Input.GetKeyUp(KeyCode.RightArrow) && tag == "RightFripperTag")
         {
-            Debug.Log("右キー離しました");
             SetAngleDefault();
         }
     }
